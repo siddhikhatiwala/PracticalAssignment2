@@ -1,0 +1,56 @@
+
+<div class="container-fluid">
+<div  class="card">
+    <div class="card-body">
+      <form [formGroup]="angForm" >
+  
+        <div class="form-group">
+          <label class="col-md-4">Name</label>
+          <input type="text"  formControlName="name" class="form-control" />
+        </div>
+        <div *ngIf="angForm.controls['name'].errors != null && angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['name'].errors['required'] != null" >
+            Name is required.
+          </div>
+        </div>
+    
+        <div class="form-group">
+            <label class="col-md-4">Email </label>
+            <input type="email"  formControlName="email" class="form-control" />
+          </div>
+          <div *ngIf="angForm.controls['email'].errors != null && angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['email'].errors['required'] != null">
+              Email is required.
+            </div>
+          </div>
+
+        <div class="form-group">
+          <label class="col-md-4">Semester </label>
+          <input type="number"  formControlName="sem" class="form-control" />
+        </div>
+        <div *ngIf="angForm.controls['sem'].errors != null && angForm.controls['sem'].invalid && (angForm.controls['sem'].dirty || angForm.controls['sem'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['sem'].errors['required'] != null">
+            Semester is required.
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-md-4">Age </label>
+          <input type="number"  formControlName="age" class="form-control" />
+        </div>
+        <div *ngIf="angForm.controls['age'].errors != null && angForm.controls['age'].invalid && (angForm.controls['age'].dirty || angForm.controls['age'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['age'].errors['required'] != null">
+            Age is required.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <button (click)="insertStud()"
+              [disabled]="angForm.pristine || angForm.invalid" 
+              class="btn btn-primary">
+              Add student
+           </button>
+        </div>
+      </form>
+    </div>
+  </div>

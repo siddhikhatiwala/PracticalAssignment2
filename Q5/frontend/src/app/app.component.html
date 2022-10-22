@@ -1,0 +1,38 @@
+<h1 align="center">Welcome to Angular!!</h1>
+
+<table border="1" width="90%" align="center">
+    <tr>
+        <td align="center">
+            <h1>Students CRUD</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="1" width="100%">
+                <tr>
+                    <td>
+                        <ul>
+                            <li>
+                                <a routerLink="/student" routerLinkActive="active">Get students</a>
+                            </li>
+                            <li>
+                                <a routerLink="/student/create">Insert students</a>
+                            </li>
+                        </ul>
+
+                    </td>
+                    <td width="70%">
+
+                        <router-outlet></router-outlet>
+                    </td>
+                    <td> </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <h3>--------------</h3>
+        </td>
+    </tr>
+</table>
