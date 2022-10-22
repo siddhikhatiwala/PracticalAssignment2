@@ -50,10 +50,7 @@ app.post('/validate', function(request, response) {
 		}
 	
 });
-app.get('/home',(req,res)=>{
-	res.send("Welcome siddhiii.k<br>3pchi2kjONtG988LAU8sNyzeMNCrRf8c!!!<br><a href='/'>Logout</a>")
-})
-app.get('/home1', function(request, response) {
+app.get('/home', function(request, response) {
 	if (request.session.loggedin) {
 		response.send("Welcome "+
 			request.session.username+
